@@ -1,0 +1,9 @@
+kill(all)$ A:matrix([1,2,3],[3,1,0],[-2,1,3]);
+D:determinant(A); if (D=0) then
+disp("The given vectors are Linearly Dependent and hence  not  a  basis") else
+disp("The given vectors are Linearly Independent and hence a basis")$ e:echelon(A);
+
+/*Execute the above and display the non-zero rows of ’e’ as follows:*/
+
+print("The vectors ",e[1],",",e[2],"are the basis for the subspace")$ r:rank(A)$
+print("Dimension of the subspace is =",r)$

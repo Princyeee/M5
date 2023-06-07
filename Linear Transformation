@@ -1,0 +1,12 @@
+kill(all)$ A:matrix([2,3],[4,-5]); u[1]:[1,-1]$
+u[2]:[1,1]$
+v[1]:[1,0]$
+v[2]:[0,1]$
+for i:1 thru 2 do(
+T[i]:A[1,i]  *  v[1]+A[2,i]  *  v[2])$
+for j:1  thru  2  do( eq[j]:u[1][j] * p+u[2][j] * q)$
+soln:solve([eq[1]=x,eq[2]=y],[p,q])$ a:ev(p,soln)$
+b:ev(q,soln)$
+print("The linear transformation is")$
+T:radcan(T[1] * a+T[2] * b)$ print("T(x,y)=",T)$
+print("T(x,y)=",T)$
